@@ -14,6 +14,7 @@ class ModelName(str, Enum):
 
 router = APIRouter(
     prefix="/path-params",
+    tags=["パスパラメータ"],
 )
 
 

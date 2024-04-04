@@ -6,6 +6,7 @@ from fastapi import APIRouter
 
 router = APIRouter(
     prefix="/first-steps",
+    tags=["最初のステップ"],
 )
 
 
