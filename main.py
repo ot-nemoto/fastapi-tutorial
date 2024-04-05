@@ -8,6 +8,7 @@ from tutorials import (
     queryParams,
     body,
     queryParamsStrValidations,
+    pathParamsNumericValidations,
 )
 
 app.include_router(firstSteps.router)
@@ -15,3 +16,4 @@ app.include_router(pathParams.router)
 app.include_router(queryParams.router)
 app.include_router(body.router)
 app.include_router(queryParamsStrValidations.router)
+app.include_router(pathParamsNumericValidations.router)
