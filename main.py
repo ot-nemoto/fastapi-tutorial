@@ -13,6 +13,7 @@ from tutorials import (
     bodyFields,
     bodyNestedModels,
     schemaExtraExample,
+    extraDataTypes,
 )
 
 app.include_router(firstSteps.router)
@@ -25,3 +26,4 @@ app.include_router(bodyMultipleParams.router)
 app.include_router(bodyFields.router)
 app.include_router(bodyNestedModels.router)
 app.include_router(schemaExtraExample.router)
+app.include_router(extraDataTypes.router)

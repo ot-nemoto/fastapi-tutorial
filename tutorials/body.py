@@ -7,17 +7,17 @@ from fastapi import APIRouter
 from pydantic import BaseModel
 
 
+router = APIRouter(
+    prefix="/body",
+    tags=["リクエストボディ"],
+)
+
+
 class Item(BaseModel):
     name: str
     description: Union[str, None] = None
     price: float
     tax: Union[float, None] = None
-
-
-router = APIRouter(
-    prefix="/body",
-    tags=["リクエストボディ"],
-)
 
 
 # @router.post("/items/")

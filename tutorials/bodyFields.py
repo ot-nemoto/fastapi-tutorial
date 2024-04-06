@@ -6,6 +6,11 @@ from typing import Union
 from fastapi import APIRouter, Body
 from pydantic import BaseModel, Field
 
+router = APIRouter(
+    prefix="/body-fields",
+    tags=["ボディ - フィールド"],
+)
+
 
 class Item(BaseModel):
     name: str
@@ -14,12 +19,6 @@ class Item(BaseModel):
     )
     price: float = Field(gt=0, description="The price must be greater than zero")
     tax: Union[float, None] = None
-
-
-router = APIRouter(
-    prefix="/body-fields",
-    tags=["ボディ - フィールド"],
-)
 
 
 @router.put("/items/{item_id}")

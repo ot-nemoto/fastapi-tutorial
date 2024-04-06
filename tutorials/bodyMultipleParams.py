@@ -6,6 +6,11 @@ from typing import Union
 from fastapi import APIRouter, Body
 from pydantic import BaseModel
 
+router = APIRouter(
+    prefix="/body-multiple-params",
+    tags=["ボディ - 複数のパラメータ"],
+)
+
 
 class Item(BaseModel):
     name: str
@@ -17,12 +22,6 @@ class Item(BaseModel):
 class User(BaseModel):
     username: str
     full_name: Union[str, None] = None
-
-
-router = APIRouter(
-    prefix="/body-multiple-params",
-    tags=["ボディ - 複数のパラメータ"],
-)
 
 
 @router.put("/items/{item_id}")

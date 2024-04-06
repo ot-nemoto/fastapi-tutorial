@@ -5,17 +5,16 @@ ref https://fastapi.tiangolo.com/ja/tutorial/path-params/
 from enum import Enum
 from fastapi import APIRouter
 
+router = APIRouter(
+    prefix="/path-params",
+    tags=["パスパラメータ"],
+)
+
 
 class ModelName(str, Enum):
     alexnet = "alexnet"
     resnet = "resnet"
     lenet = "lenet"
-
-
-router = APIRouter(
-    prefix="/path-params",
-    tags=["パスパラメータ"],
-)
 
 
 @router.get("/items/{item_id}")
