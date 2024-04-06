@@ -10,6 +10,7 @@ from tutorials import (
     queryParamsStrValidations,
     pathParamsNumericValidations,
     bodyMultipleParams,
+    bodyFields,
 )
 
 app.include_router(firstSteps.router)
@@ -19,3 +20,4 @@ app.include_router(body.router)
 app.include_router(queryParamsStrValidations.router)
 app.include_router(pathParamsNumericValidations.router)
 app.include_router(bodyMultipleParams.router)
+app.include_router(bodyFields.router)
