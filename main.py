@@ -15,6 +15,7 @@ from tutorials import (
     schemaExtraExample,
     extraDataTypes,
     cookieParams,
+    headerParams,
 )
 
 app.include_router(firstSteps.router)
@@ -29,3 +30,4 @@ app.include_router(bodyNestedModels.router)
 app.include_router(schemaExtraExample.router)
 app.include_router(extraDataTypes.router)
 app.include_router(cookieParams.router)
+app.include_router(headerParams.router)
