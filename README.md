@@ -34,3 +34,4 @@ uvicorn main:app --reload
 - [クッキーのパラメータ](tutorials/cookieParams.py)
 - [ヘッダーのパラメータ](tutorials/headerParams.py)
 - [レスポンスモデル](tutorials/responseModel.py)
+- [モデル - より詳しく](tutorials/extraModels.py)

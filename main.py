@@ -17,6 +17,7 @@ from tutorials import (
     cookieParams,
     headerParams,
     responseModel,
+    extraModels,
 )
 
 app.include_router(firstSteps.router)
@@ -33,3 +34,4 @@ app.include_router(extraDataTypes.router)
 app.include_router(cookieParams.router)
 app.include_router(headerParams.router)
 app.include_router(responseModel.router)
+app.include_router(extraModels.router)
