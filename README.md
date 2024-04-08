@@ -35,3 +35,4 @@ uvicorn main:app --reload
 - [ヘッダーのパラメータ](tutorials/headerParams.py)
 - [レスポンスモデル](tutorials/responseModel.py)
 - [モデル - より詳しく](tutorials/extraModels.py)
+- [レスポンスステータスコード](tutorials/responseStatusCode.py)
