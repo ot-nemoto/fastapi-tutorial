@@ -37,3 +37,4 @@ uvicorn main:app --reload
 - [モデル - より詳しく](tutorials/extraModels.py)
 - [レスポンスステータスコード](tutorials/responseStatusCode.py)
 - [フォームデータ](tutorials/requestForms.py)
+- [Request Files](tutorials/requestFiles.py)
