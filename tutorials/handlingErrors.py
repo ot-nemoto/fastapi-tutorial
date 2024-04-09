@@ -9,7 +9,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import PlainTextResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
 from fastapi.routing import APIRoute
-import json
+import main
 
 
 class UnicornException(Exception):
@@ -91,6 +91,14 @@ async def read_item_header(item_id: str):
     }
 
 
+# @main.app.exception_handler(UnicornException)
+# async def unicorn_exception_handler(request: Request, exc: UnicornException):
+#     return JSONResponse(
+#         status_code=418,
+#         content={"message": f"Oops! {exc.name} did something. There goes a rainbow..."},
+#     )
+
+
 @router.get("/case03/unicorns/{name}")
 async def read_unicorn(name: str):
     """
@@ -101,6 +109,16 @@ async def read_unicorn(name: str):
     return {
         "unicorn_name": name,
     }
+
+
+# @main.app.exception_handler(StarletteHTTPException)
+# async def http_exception_handler(request, exc):
+#     return PlainTextResponse(str(exc.detail), status_code=exc.status_code)
+#
+#
+# @main.app.exception_handler(RequestValidationError)
+# async def validation_exception_handler(request, exc):
+#     return PlainTextResponse(str(exc), status_code=400)
 
 
 @router.get("/case04/items/{item_id}")
