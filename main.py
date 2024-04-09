@@ -22,6 +22,7 @@ from tutorials import (
     requestForms,
     requestFiles,
     requestFormsAndFiles,
+    handlingErrors,
 )
 
 app.include_router(firstSteps.router)
@@ -43,3 +44,4 @@ app.include_router(responseStatusCode.router)
 app.include_router(requestForms.router)
 app.include_router(requestFiles.router)
 app.include_router(requestFormsAndFiles.router)
+app.include_router(handlingErrors.router)
