@@ -23,6 +23,7 @@ from tutorials import (
     requestFiles,
     requestFormsAndFiles,
     handlingErrors,
+    pathOperationConfiguration,
 )
 
 app.include_router(firstSteps.router)
@@ -45,3 +46,4 @@ app.include_router(requestForms.router)
 app.include_router(requestFiles.router)
 app.include_router(requestFormsAndFiles.router)
 app.include_router(handlingErrors.router)
+app.include_router(pathOperationConfiguration.router)

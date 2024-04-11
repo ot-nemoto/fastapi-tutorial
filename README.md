@@ -40,3 +40,4 @@ uvicorn main:app --reload
 - [Request Files](tutorials/requestFiles.py)
 - [リクエストフォームとファイル](tutorials/requestFormsAndFiles.py)
 - [エラーハンドリング](tutorials/handlingErrors.py)
+- [Path Operation の設定](tutorials/pathOperationConfiguration.py)
