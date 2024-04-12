@@ -5,7 +5,7 @@ ref https://fastapi.tiangolo.com/ja/tutorial/encoder/
 from datetime import datetime
 from typing import Union
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter
 from fastapi.encoders import jsonable_encoder
 from pydantic import BaseModel
 
