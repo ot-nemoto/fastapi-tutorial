@@ -41,3 +41,4 @@ uvicorn main:app --reload
 - [リクエストフォームとファイル](tutorials/requestFormsAndFiles.py)
 - [エラーハンドリング](tutorials/handlingErrors.py)
 - [Path Operation の設定](tutorials/pathOperationConfiguration.py)
+- [JSON 互換エンコーダ](tutorials/encoder.py)

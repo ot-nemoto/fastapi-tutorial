@@ -24,6 +24,7 @@ from tutorials import (
     requestFormsAndFiles,
     handlingErrors,
     pathOperationConfiguration,
+    encoder,
 )
 
 app.include_router(firstSteps.router)
@@ -47,3 +48,4 @@ app.include_router(requestFiles.router)
 app.include_router(requestFormsAndFiles.router)
 app.include_router(handlingErrors.router)
 app.include_router(pathOperationConfiguration.router)
+app.include_router(encoder.router)
