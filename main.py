@@ -26,6 +26,7 @@ from tutorials import (
     pathOperationConfiguration,
     encoder,
     bodyUpdates,
+    dependencies,
 )
 
 app.include_router(firstSteps.router)
@@ -51,3 +52,4 @@ app.include_router(handlingErrors.router)
 app.include_router(pathOperationConfiguration.router)
 app.include_router(encoder.router)
 app.include_router(bodyUpdates.router)
+app.include_router(dependencies.router)

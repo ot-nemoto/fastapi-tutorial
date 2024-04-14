@@ -43,3 +43,5 @@ uvicorn main:app --reload
 - [Path Operation の設定](tutorials/pathOperationConfiguration.py)
 - [JSON 互換エンコーダ](tutorials/encoder.py)
 - [ボディ - 更新](tutorials/bodyUpdates.py)
+- [依存関係 - 最初のステップ](tutorials/dependencies.py)
+  - [依存関係としてのクラス](tutorials/classesAsDependencies.py)
