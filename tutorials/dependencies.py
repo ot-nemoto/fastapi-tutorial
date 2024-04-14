@@ -6,7 +6,11 @@ from typing import Union
 
 from fastapi import APIRouter, Depends
 
-from . import classesAsDependencies, subDependencies
+from . import (
+    classesAsDependencies,
+    subDependencies,
+    dependenciesInPathOperationDecorators,
+)
 
 router = APIRouter(
     prefix="/dependencies",
@@ -15,6 +19,7 @@ router = APIRouter(
 
 router.include_router(classesAsDependencies.router)
 router.include_router(subDependencies.router)
+router.include_router(dependenciesInPathOperationDecorators.router)
 
 
 async def common_parameters(
