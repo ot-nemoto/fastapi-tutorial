@@ -45,3 +45,4 @@ uvicorn main:app --reload
 - [ボディ - 更新](tutorials/bodyUpdates.py)
 - [依存関係 - 最初のステップ](tutorials/dependencies.py)
   - [依存関係としてのクラス](tutorials/classesAsDependencies.py)
+  - [サブ依存関係](tutorials/subDependencies.py)

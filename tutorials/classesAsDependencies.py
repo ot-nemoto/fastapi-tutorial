@@ -3,6 +3,7 @@ ref https://fastapi.tiangolo.com/ja/tutorial/dependencies/classes-as-dependencie
 """
 
 from typing import Union
+
 from fastapi import APIRouter, Depends
 
 router = APIRouter(

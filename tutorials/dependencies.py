@@ -3,9 +3,10 @@ ref https://fastapi.tiangolo.com/ja/tutorial/dependencies/
 """
 
 from typing import Union
+
 from fastapi import APIRouter, Depends
 
-from . import classesAsDependencies
+from . import classesAsDependencies, subDependencies
 
 router = APIRouter(
     prefix="/dependencies",
@@ -13,6 +14,7 @@ router = APIRouter(
 )
 
 router.include_router(classesAsDependencies.router)
+router.include_router(subDependencies.router)
 
 
 async def common_parameters(
