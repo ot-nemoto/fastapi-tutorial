@@ -1,6 +1,21 @@
-from fastapi import FastAPI
+from fastapi import Depends, FastAPI, Request
 
-app = FastAPI()
+
+async def verify_token(request: Request):
+    return
+
+
+async def verify_key(request: Request):
+    return
+
+
+app = FastAPI(dependencies=[Depends(verify_token), Depends(verify_key)])
+"""
+以下は、Global Dependencies検証の為、空のバリデーションチェックを定義
+```
+dependencies=[Depends(verify_token), Depends(verify_key)]
+```
+"""
 
 from tutorials import (
     firstSteps,

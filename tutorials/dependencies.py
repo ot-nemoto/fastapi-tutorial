@@ -10,6 +10,7 @@ from . import (
     classesAsDependencies,
     subDependencies,
     dependenciesInPathOperationDecorators,
+    globalDependencies,
 )
 
 router = APIRouter(
@@ -20,6 +21,7 @@ router = APIRouter(
 router.include_router(classesAsDependencies.router)
 router.include_router(subDependencies.router)
 router.include_router(dependenciesInPathOperationDecorators.router)
+router.include_router(globalDependencies.router)
 
 
 async def common_parameters(
