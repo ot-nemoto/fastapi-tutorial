@@ -48,3 +48,4 @@ uvicorn main:app --reload
   - [サブ依存関係](tutorials/subDependencies.py)
   - [path operation デコレータの依存関係](tutorials/dependenciesInPathOperationDecorators.py)
   - [Global Dependencies](tutorials/globalDependencies.py)
+  - [yield を持つ依存関係](tutorials/dependenciesWithYield.py)
