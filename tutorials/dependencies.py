@@ -6,12 +6,12 @@ from typing import Union
 
 from fastapi import APIRouter, Depends
 
-from . import (
-    classesAsDependencies,
-    subDependencies,
-    dependenciesInPathOperationDecorators,
-    globalDependencies,
-    dependenciesWithYield,
+from .dependencies_ import (
+    classes_as_dependencies,
+    sub_dependencies,
+    dependencies_in_path_operation_decorators,
+    global_dependencies,
+    dependencies_with_yield,
 )
 
 router = APIRouter(
@@ -19,11 +19,11 @@ router = APIRouter(
     tags=["依存関係 - 最初のステップ"],
 )
 
-router.include_router(classesAsDependencies.router)
-router.include_router(subDependencies.router)
-router.include_router(dependenciesInPathOperationDecorators.router)
-router.include_router(globalDependencies.router)
-router.include_router(dependenciesWithYield.router)
+router.include_router(classes_as_dependencies.router)
+router.include_router(sub_dependencies.router)
+router.include_router(dependencies_in_path_operation_decorators.router)
+router.include_router(global_dependencies.router)
+router.include_router(dependencies_with_yield.router)
 
 
 async def common_parameters(
