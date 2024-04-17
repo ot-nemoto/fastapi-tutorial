@@ -3,3 +3,5 @@ uvicorn
 pydantic[email]
 python-multipart
 isort
+python-jose[cryptography]
+passlib[bcrypt]
