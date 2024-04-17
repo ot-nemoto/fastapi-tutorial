@@ -11,6 +11,8 @@ from jose import JWTError, jwt
 from passlib.context import CryptContext
 from pydantic import BaseModel
 
+from tutorials.security_ import simple_oauth2
+
 router = APIRouter(
     prefix="/oauth2-jwt",
     tags=["パスワード（およびハッシュ化）によるOAuth2、JWTトークンによるBearer"],
@@ -60,6 +62,10 @@ class UserInDB(User):
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
+
+oauth2_scheme = simple_oauth2.oauth2_scheme
+# security/simple-oauth2/token を有効にする場合は以下をコメントアウト
+# ---
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="security/oauth2-jwt/token")
 
 

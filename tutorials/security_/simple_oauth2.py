@@ -88,6 +88,16 @@ async def get_current_active_user(
 
 @router.post("/token")
 async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
+    """
+    アクセストークンを作成
+    """
+    """
+    curl -s -XPOST \
+        -H 'accept: application/json' \
+        -H 'Content-Type: application/x-www-form-urlencoded' \
+        -d 'grant_type=&username=johndoe&password=secret&scope=&client_id=&client_secret=' \
+        'http://127.0.0.1:8000/security/simple-oauth2/token' | jq .
+    """
     user_dict = fake_users_db.get(form_data.username)
     if not user_dict:
         raise HTTPException(
@@ -112,4 +122,18 @@ async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
 async def read_users_me(
     current_user: Annotated[User, Depends(get_current_active_user)],
 ):
+    """
+    カレントユーザを取得
+    """
+    """
+    access_token=$(curl -s -XPOST \
+        -H 'accept: application/json' \
+        -H 'Content-Type: application/x-www-form-urlencoded' \
+        -d 'grant_type=&username=johndoe&password=secret&scope=&client_id=&client_secret=' \
+        'http://127.0.0.1:8000/security/simple-oauth2/token' | jq -r '.access_token')
+    curl -s -XGET \
+        -H "accept: application/json" \
+        -H "Authorization: Bearer ${access_token}" \
+        'http://127.0.0.1:8000/security/simple-oauth2/users/me' | jq .
+    """
     return current_user
