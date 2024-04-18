@@ -43,6 +43,7 @@ from tutorials import (
     bodyUpdates,
     dependencies,
     security,
+    middleware,
 )
 
 app.include_router(firstSteps.router)
@@ -70,3 +71,4 @@ app.include_router(encoder.router)
 app.include_router(bodyUpdates.router)
 app.include_router(dependencies.router)
 app.include_router(security.router)
+app.include_router(middleware.router)
