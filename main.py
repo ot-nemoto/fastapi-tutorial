@@ -44,6 +44,7 @@ from tutorials import (
     dependencies,
     security,
     middleware,
+    cors,
 )
 
 app.include_router(firstSteps.router)
@@ -72,3 +73,4 @@ app.include_router(bodyUpdates.router)
 app.include_router(dependencies.router)
 app.include_router(security.router)
 app.include_router(middleware.router)
+app.include_router(cors.router)

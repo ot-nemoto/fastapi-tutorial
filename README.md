@@ -55,3 +55,4 @@ uvicorn main:app --reload
   - [Simple OAuth2 with Password and Bearer](tutorials/security_/simple_oauth2.py)
   - [パスワード（およびハッシュ化）による OAuth2、JWT トークンによる Bearer](tutorials/security_/oauth2_jwt.py)
 - [ミドルウェア](tutorials/middleware.py)
+- [CORS (オリジン間リソース共有)](tutorials/cors.py)
